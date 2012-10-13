@@ -1,0 +1,78 @@
+﻿/* 
+ServerChecker v4 operates and manages various kinds of software on server systems.
+Copyright (C) 2010 Stijn Devriendt
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+
+namespace SC.Service
+{
+    partial class ProjectInstaller
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Component Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.svcProcessInstaller = new System.ServiceProcess.ServiceProcessInstaller();
+            this.svcInstaller = new System.ServiceProcess.ServiceInstaller();
+            // 
+            // svcProcessInstaller
+            // 
+            this.svcProcessInstaller.Account = System.ServiceProcess.ServiceAccount.LocalSystem;
+            this.svcProcessInstaller.Password = null;
+            this.svcProcessInstaller.Username = null;
+            // 
+            // svcInstaller
+            // 
+            this.svcInstaller.DisplayName = "ServerChecker V4";
+            this.svcInstaller.ServiceName = "ServerChecker V4";
+            this.svcInstaller.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
+            // 
+            // ProjectInstaller
+            // 
+            this.Installers.AddRange(new System.Configuration.Install.Installer[] {
+            this.svcProcessInstaller,
+            this.svcInstaller});
+
+        }
+
+        #endregion
+
+        private System.ServiceProcess.ServiceProcessInstaller svcProcessInstaller;
+        private System.ServiceProcess.ServiceInstaller svcInstaller;
+    }
+}

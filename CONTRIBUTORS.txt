@@ -1,0 +1,20 @@
+Below is a list of contributors for this software.
+When making changes to this software, please add your
+name to the list. 
+
+Please use the form:
+xxx (mail@mail.com - ...)
+
+
+Original Author
+---------------
+Stijn Devriendt (HIGHGuY@gmail.com - dumbclan.co.uk)
+
+Other Contributors
+------------------
+
+
+
+
+
+

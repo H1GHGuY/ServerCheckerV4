@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{26805299-9908-493D-9508-BD12B2962CB3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC.GUI</RootNamespace>
+    <AssemblyName>SC.GUI</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SC.Client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Visual Studio 2005\Projects\SCv4\SC.Client\bin\Debug\SC.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="SC.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=22271cae2e665f51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Visual Studio 2005\Projects\SCv4\SCv4\bin\Debug\SC.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="SC.Interfaces.DefaultPlugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=22271cae2e665f51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Visual Studio 2005\Projects\SCv4\SCv4\bin\Debug\SC.Interfaces.DefaultPlugins.dll</HintPath>
+    </Reference>
+    <Reference Include="SC.Remoting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Visual Studio 2005\Projects\SCv4\SC.Remoting\bin\Debug\SC.Remoting.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddServerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddServerForm.Designer.cs">
+      <DependentUpon>AddServerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PluginPanelLoader.cs" />
+    <Compile Include="PluginSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PluginSelector.Designer.cs">
+      <DependentUpon>PluginSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RootControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RootControl.Designer.cs">
+      <DependentUpon>RootControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SCBrowser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SCBrowser.Designer.cs">
+      <DependentUpon>SCBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityManagerIPControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SecurityManagerIPControl.Designer.cs">
+      <DependentUpon>SecurityManagerIPControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityManagerPermissionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SecurityManagerPermissionControl.Designer.cs">
+      <DependentUpon>SecurityManagerPermissionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityManagerUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SecurityManagerUserControl.Designer.cs">
+      <DependentUpon>SecurityManagerUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ServerControl.Designer.cs">
+      <DependentUpon>ServerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServerPluginPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ServerPluginPanel.Designer.cs">
+      <DependentUpon>ServerPluginPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServerProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AddServerForm.resx">
+      <DependentUpon>AddServerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PluginSelector.resx">
+      <DependentUpon>PluginSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RootControl.resx">
+      <DependentUpon>RootControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SCBrowser.resx">
+      <DependentUpon>SCBrowser.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecurityManagerIPControl.resx">
+      <DependentUpon>SecurityManagerIPControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecurityManagerPermissionControl.resx">
+      <DependentUpon>SecurityManagerPermissionControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecurityManagerUserControl.resx">
+      <DependentUpon>SecurityManagerUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServerControl.resx">
+      <DependentUpon>ServerControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServerPluginPanel.resx">
+      <DependentUpon>ServerPluginPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SC.DefaultPlugins.GUI\SC.DefaultPlugins.GUI.csproj">
+      <Project>{BF041914-F3B0-4EA4-9980-CEA67FB407D5}</Project>
+      <Name>SC.DefaultPlugins.GUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SC.GUI.Utility\SC.GUI.Utility.csproj">
+      <Project>{590B753E-39A3-4CA5-A6E9-C6A176410F5D}</Project>
+      <Name>SC.GUI.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
